@@ -4,6 +4,9 @@
 
 <ul>
   <% @orders.each do |order| %>
-    <li> <%= order.pretty_name %>: <%= order.quantity %> <%= order.topping %></li>
+    <li> <%= order.id %>
+  <a href="/pizza-orders/<%= order.id %>">  <%= order.pretty_name %> </a>
+
+    : <%= order.quantity %> <%= order.topping %></li>
   <% end %>
 </ul>

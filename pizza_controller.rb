@@ -48,3 +48,9 @@ end
 #EDIT
 #UPDATE
 #DELETE
+
+post '/pizza-orders/:id/delete' do
+  @order = PizzaOrder.find( params[:id] )
+  @order.delete()
+  redirect to '/pizza-orders'
+end

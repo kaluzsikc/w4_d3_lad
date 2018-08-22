@@ -1,3 +1,8 @@
 <h2>Orders by id</h2>
 
-<p>ID belongs to <%= @order.pretty_name %></p>
+<p>ID <%= @order.id %>  belongs to <%= @order.pretty_name %></p>
+
+
+<form method="post" action="/pizza-orders/<%=@order.id%>/delete">
+  <input type='submit' value="Delete Order"/>
+</form>
